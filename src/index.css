@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-start: #E1F5FE;
+  --color-bg-end: #B2EBF2;
+}
+
+:root {
+  /* Premium Calm Theme Palette additional vars */
+  --color-primary: #0277BD;
+  --color-user-bubble: #0288D1;
+  --color-bot-bubble: rgba(255, 255, 255, 0.85);
+
+  --color-glass-border: rgba(255, 255, 255, 0.6);
+  --color-glass-surface: rgba(255, 255, 255, 0.45);
+
+  --shadow-soft: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+
+  --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  background: linear-gradient(135deg, var(--color-bg-start) 0%, var(--color-bg-end) 100%);
+  background-attachment: fixed;
+  color: #37474F;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Glass Container Utility */
+.glass-container {
+  background: var(--color-glass-surface);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--color-glass-border);
+  box-shadow: var(--shadow-soft);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Markdown Content Styling */
+.markdown-content p {
+  margin-bottom: 0.5em;
+}
+
+.markdown-content p:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-content ul {
+  list-style-type: disc;
+  padding-left: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.markdown-content strong {
+  font-weight: 600;
+  color: inherit;
+}

@@ -1,89 +1,73 @@
-# calmcare-ai-urologist-
-Ethical AI medical assistant for kidney stone education with built-in safety guardrails built with React and TypeScript. Supports OpenAI and Gemini, includes strict medical safety guardrails, mock AI fallback mode, and a patient-friendly chat interface.
-# CalmCare – AI Urologist Assistant 💬🩺
+# React + TypeScript + Vite
 
-**CalmCare** is a web-based AI chat application that provides **safe, educational information** related to **kidney stone health**.  
-It simulates an AI urologist to help users understand symptoms, prevention, and recovery — while **strictly avoiding diagnosis or personalized medical advice**.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Built with strong **medical AI safety guardrails**, CalmCare is ideal for healthcare AI demos, prototypes, and responsible AI experiments.
+Currently, two official plugins are available:
 
----
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## 📸 Screenshots
+## React Compiler
 
-> Add screenshots to `/screenshots` folder and update paths below
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-| Chat Interface | Safety Guardrails |
-|---------------|------------------|
-| ![Chat UI](screenshots/chat-ui.png) | ![Safety](screenshots/safety-rules.png) |
+## Expanding the ESLint configuration
 
----
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-## ✨ Features
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-- 🤖 AI-powered chat assistant focused on kidney stone education
-- 🧠 Multi-AI provider support:
-  - OpenAI (GPT-3.5)
-  - Google Gemini
-- 🔄 Automatic fallback to **Mock AI mode**
-- 🛑 Medical safety rules enforced:
-  - No diagnosis
-  - No treatment or medication advice
-  - Redirects to doctors for personal or emergency cases
-- ⏱️ Concise responses (under 40 words)
-- 😌 Anxiety-aware, reassuring tone
-- 📱 Responsive, mobile-friendly UI
-- ⚠️ Medical disclaimer always visible
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
----
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
 
-## 🧱 Tech Stack
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-- **Frontend:** React + TypeScript
-- **Build Tool:** Vite
-- **Styling:** Tailwind CSS
-- **Icons:** Lucide React
-- **AI APIs:** OpenAI, Google Gemini
-- **Architecture:** Component-based, service-oriented design
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
----
-
-## 🛡️ AI Safety & Ethics
-
-CalmCare is intentionally limited to **general medical education only**.
-
-The assistant will:
-- Refuse to interpret lab reports or scans
-- Refuse medication or dosage recommendations
-- Encourage consulting licensed healthcare professionals
-
-This ensures **ethical and responsible AI usage** in healthcare.
-
----
-
-## 🧪 Mock / Demo Mode
-
-If no API key is configured, the app runs in **Mock AI mode**, enabling:
-- UI demonstrations
-- Development without API costs
-- Offline testing
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js v18+
-- npm or yarn
-
-### Installation
-```bash
-npm install
-VITE_OPENAI_API_KEY=your_openai_key
-VITE_GEMINI_API_KEY=your_gemini_key
-###Run Locally
-npm run dev
-
-http://localhost:5173
-```bash
-npm install
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
