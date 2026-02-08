@@ -35,6 +35,56 @@ Built with strong **medical AI safety guardrails**, CalmCare is ideal for health
 - ⚠️ Medical disclaimer always visible
 
 ---
+## 🎯 Problem This Project Solves
+
+Patients searching online for kidney stone symptoms often encounter:
+- Anxiety-inducing or misleading information
+- Unsafe AI chatbots giving medical advice
+- No clear guidance on when to consult a doctor
+
+This project explores how **AI can be used responsibly in healthcare**
+by providing **education without diagnosis or treatment advice**.
+
+## 🧠 Key Engineering Highlights
+
+- Multi-provider AI architecture (OpenAI & Gemini)
+- Centralized AI safety validation layer
+- Automatic fallback to mock AI mode (no API dependency)
+- Prompt engineering with response length & tone control
+- Clean separation of UI, services, and safety logic
+- Production-ready frontend with React + TypeScript
+
+## 🛡️ Medical AI Safety & Ethics
+
+This project intentionally restricts AI behavior:
+
+✔ No diagnosis  
+✔ No medication or dosage advice  
+✔ No interpretation of medical reports  
+✔ Emergency symptoms trigger professional referral  
+
+These guardrails are enforced at the **application logic and prompt level**,
+not left to the AI model alone.
+
+## 🚀 What This Project Demonstrates
+
+- Responsible AI design in healthcare contexts
+- Ability to translate ethical requirements into technical constraints
+- Frontend engineering with modern React patterns
+- API integration with fail-safe fallback strategies
+- Clear communication through UI and documentation
+
+## 💡 Solution Overview
+
+CalmCare is an **AI-powered medical education chatbot** that simulates
+an AI urologist while enforcing **strict medical safety guardrails**.
+
+It provides:
+- General educational answers only
+- Emotional reassurance for anxious users
+- Automatic escalation to professional care when needed
+
+The system is designed to demonstrate **ethical AI behavior in healthcare applications**.
 
 ## 🧱 Tech Stack
 
@@ -60,6 +110,15 @@ This ensures **ethical and responsible AI usage** in healthcare.
 
 ---
 
+## 👤 Author
+
+**Abhishek Hirve**  
+AI/ML Engineer | Data Professional | Healthcare AI Enthusiast  
+
+This project was built as a demonstration of ethical AI system design
+and production-quality frontend engineering.
+
+---
 ## 🧪 Mock / Demo Mode
 
 If no API key is configured, the app runs in **Mock AI mode**, enabling:
