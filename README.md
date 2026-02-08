@@ -9,11 +9,9 @@ Built with strong **medical AI safety guardrails**, CalmCare is ideal for health
 
 ## 📸 Screenshots
 
-> Add screenshots to `/screenshots` folder and update paths below
-
 | Chat Interface | Safety Guardrails |
 |---------------|------------------|
-| ![Chat UI](https://github.com/9158764767/calmcare-ai-urologist-/blob/main/Screenshots/chat-ui.png) | ![Safety](screenshots/safety-rules.png) |
+| ![Chat UI](https://github.com/9158764767/calmcare-ai-urologist-/blob/main/Screenshots/chat-ui.png) | ![Safety](https://github.com/9158764767/calmcare-ai-urologist-/blob/main/Screenshots/safety-rules.png) |
 
 ---
 
