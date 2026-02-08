@@ -98,22 +98,6 @@ No keys → automatic Mock mode.
 This project is not a medical device and does not provide medical advice.
 For medical concerns, always consult a qualified healthcare professional.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
