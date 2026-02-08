@@ -1,4 +1,7 @@
 # CalmCare – AI Urologist Assistant 💬🩺
+![Stars](https://img.shields.io/github/stars/9158764767/calmcare-ai-urologist-?style=social)
+![Issues](https://img.shields.io/github/issues/9158764767/calmcare-ai-urologist-)
+![License](https://img.shields.io/github/license/9158764767/calmcare-ai-urologist-)
 
 **CalmCare** is a web-based AI chat application that provides **safe, educational information** related to **kidney stone health**.  
 It simulates an AI urologist to help users understand symptoms, prevention, and recovery — while **strictly avoiding diagnosis or personalized medical advice**.
